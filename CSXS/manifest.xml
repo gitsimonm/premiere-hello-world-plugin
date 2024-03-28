@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest
+	Version="6.0"
+	ExtensionBundleId="com.bbc.demo-plugin"
+	ExtensionBundleVersion="1.0.0"
+	ExtensionBundleName="BBC demo-plugin"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- ExtensionManifest
+	Version : the schema of this manifest file, ie. DO NOT change it!
+	ExtentionBundleVersion : your plugin version number
+-->
+	<ExtensionList>
+		<Extension Id="com.bbc.demo-plugin" Version="1.0.0" />
+	<!-- ExtensionList Extension Version : your plugin version number
+	-->
+	</ExtensionList>
+
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="AEFT" Version="12.0" />
+			<Host Name="PHXS" Version="12.0" />
+			<Host Name="PHSP" Version="12.0" />
+			<Host Name="ILST" Version="12.0" />
+			<Host Name="PPRO" Version="12.0" />
+			<!-- list of adobe applications (name and version number) which your plugin will run in-->
+			<!-- here we only supply one version number, this will be intepreted as the minimum required version-->
+			<!-- After Effects version 12 released circa 2014-->
+			<!-- Photoshop has two product codes, see the CEP Cookbook for more info/codes/versions-->
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="7.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+
+	<DispatchInfoList>
+		<Extension Id="com.bbc.demo-plugin">
+			<DispatchInfo>
+				<Resources>
+					<MainPath>./index.html</MainPath> 
+					<!-- the html for your plugin window -->
+					<ScriptPath>./jsx/premiere.jsx</ScriptPath>
+					<!-- your plugin executes functions declared in your .jsx to control the adobe application -->
+					<CEFCommandLine>
+						<Parameter>--enable-nodejs</Parameter>
+						<Parameter>--mixed-context</Parameter>
+					</CEFCommandLine>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>BBC demo-plugin</Menu>
+					<Geometry>
+					<!-- different Adobe application handle the plugin window in different ways-->
+					<!-- try playing with these values to see if they affect anything-->
+					<!-- many bugs related to plugin window display/sizing/focus reported-->
+						<Size>
+							<Height>900</Height>
+							<Width>550</Width>
+						</Size>
+						<MinSize>
+							<Height>400</Height>
+							<Width>550</Width>
+						</MinSize>
+					</Geometry>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>
