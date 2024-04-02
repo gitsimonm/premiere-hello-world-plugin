@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionManifest
 	Version="6.0"
-	ExtensionBundleId="com.bbc.demo-plugin"
+	ExtensionBundleId="com.simon.demo-plugin"
 	ExtensionBundleVersion="1.0.0"
-	ExtensionBundleName="BBC demo-plugin"
+	ExtensionBundleName="Simon demo-plugin"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <!-- ExtensionManifest
 	Version : the schema of this manifest file, ie. DO NOT change it!
 	ExtentionBundleVersion : your plugin version number
 -->
 	<ExtensionList>
-		<Extension Id="com.bbc.demo-plugin" Version="1.0.0" />
+		<Extension Id="com.simon.demo-plugin" Version="1.0.0" />
 	<!-- ExtensionList Extension Version : your plugin version number
 	-->
 	</ExtensionList>
@@ -36,7 +36,7 @@
 	</ExecutionEnvironment>
 
 	<DispatchInfoList>
-		<Extension Id="com.bbc.demo-plugin">
+		<Extension Id="com.simon.demo-plugin">
 			<DispatchInfo>
 				<Resources>
 					<MainPath>./index.html</MainPath> 
@@ -53,7 +53,7 @@
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>BBC demo-plugin</Menu>
+					<Menu>Simon demo-plugin</Menu>
 					<Geometry>
 					<!-- different Adobe application handle the plugin window in different ways-->
 					<!-- try playing with these values to see if they affect anything-->

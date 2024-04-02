@@ -1,0 +1,7 @@
+# any certs generates when building
+*.p12
+
+# any bundles we've built/packaged
+*.zxp
+
+*.DS_Store
